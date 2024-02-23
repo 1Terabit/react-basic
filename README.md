@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+```markdown
+# Aplicación de Lista de Tareas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esta aplicación es un componente de React que proporciona una interfaz sencilla para añadir tareas a una lista. Los usuarios pueden escribir el nombre de una nueva tarea y agregarla a la lista mediante un botón.
 
-## Available Scripts
+## Características
 
-In the project directory, you can run:
+- **Añadir Tareas:** Los usuarios pueden introducir el nombre de las tareas en un campo de texto y agregarlas a la lista presionando el botón "Add task".
+- **Visualización de Tareas:** Las tareas agregadas se muestran en una lista debajo del campo de texto, permitiendo a los usuarios ver todas las tareas que han ingresado.
 
-### `npm start`
+## Estructura del Código
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+El componente `TaskList` utiliza el hook `useState` de React para manejar el estado. Hay dos estados principales:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- `tasks`: Un arreglo que almacena todas las tareas agregadas.
+- `newTask`: Una cadena de texto que representa la tarea actualmente ingresada en el campo de texto, pero que aún no ha sido agregada a la lista.
 
-### `npm test`
+### Funciones Principales
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **addTask**: Esta función se ejecuta cuando el usuario envía el formulario (presionando "Enter" o el botón "Add task"). Añade la tarea actual (`newTask`) al arreglo de `tasks` y limpia el campo de texto para una nueva entrada.
 
-### `npm run build`
+### Renderizado
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+El componente renderiza un formulario con un campo de texto y un botón para agregar la tarea. Debajo del formulario, se muestra una lista (`<ul>`) de todas las tareas agregadas, donde cada tarea es un elemento de lista (`<li>`).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Estilos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Los estilos se definen en el archivo `TaskList.css`, permitiendo personalizar la apariencia de la lista de tareas y el formulario.
 
-### `npm run eject`
+## Uso
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Para utilizar este componente en una aplicación de React, simplemente se debe importar y renderizar en el componente principal o en cualquier otro componente que lo requiera.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Instalación
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Para instalar y ejecutar esta aplicación, sigue los siguientes pasos:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clona el repositorio en tu máquina local usando:
+   ```
 
-## Learn More
+   git clone URL_DEL_REPOSITORIO
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```
+   Sustituye `URL_DEL_REPOSITORIO` con la URL actual del repositorio de Git.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Navega al directorio del proyecto:
+   ```
 
-### Code Splitting
+   cd directorio_del_proyecto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```
+   Reemplaza `directorio_del_proyecto` con el nombre del directorio donde se clonó el proyecto.
 
-### Analyzing the Bundle Size
+3. Instala las dependencias necesarias ejecutando:
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   npm install
 
-### Making a Progressive Web App
+   ```
+   Asegúrate de tener Node.js y npm instalados en tu sistema antes de ejecutar este comando.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Arranque del Sistema
 
-### Advanced Configuration
+Para iniciar la aplicación, ejecuta el siguiente comando en el directorio del proyecto:
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+npm start
 
-### Deployment
+```
+Este comando arrancará el servidor de desarrollo y abrirá la aplicación en tu navegador por defecto. Si no se abre automáticamente, puedes acceder a ella visitando `http://localhost:3000` en tu navegador.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
