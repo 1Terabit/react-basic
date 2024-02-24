@@ -1,72 +1,34 @@
-```markdown
-# Aplicación de Lista de Tareas
+# TaskList
 
-Esta aplicación es un componente de React que proporciona una interfaz sencilla para añadir tareas a una lista. Los usuarios pueden escribir el nombre de una nueva tarea y agregarla a la lista mediante un botón.
+This project is a simple task list application created with React.
 
-## Características
+## Project Structure
 
-- **Añadir Tareas:** Los usuarios pueden introducir el nombre de las tareas en un campo de texto y agregarlas a la lista presionando el botón "Add task".
-- **Visualización de Tareas:** Las tareas agregadas se muestran en una lista debajo del campo de texto, permitiendo a los usuarios ver todas las tareas que han ingresado.
+The project consists of a single React component, `TaskList`, which is located in the `TaskList.js` file. This component handles the application logic and renders the user interface. The styles for this component are defined in the `TaskList.css` file.
 
-## Estructura del Código
+## Code
 
-El componente `TaskList` utiliza el hook `useState` de React para manejar el estado. Hay dos estados principales:
+The `TaskList` component uses React's `useState` hook to manage the state of the task list and the new task being entered.
 
-- `tasks`: Un arreglo que almacena todas las tareas agregadas.
-- `newTask`: Una cadena de texto que representa la tarea actualmente ingresada en el campo de texto, pero que aún no ha sido agregada a la lista.
+When the form is submitted, the `addTask` function is called, which prevents the default form submission behavior, adds the new task to the task list, and then clears the input field.
 
-### Funciones Principales
+The user interface consists of a form for entering new tasks and a list of existing tasks. The styles for this interface are defined in the `TaskList.css` file.
 
-- **addTask**: Esta función se ejecuta cuando el usuario envía el formulario (presionando "Enter" o el botón "Add task"). Añade la tarea actual (`newTask`) al arreglo de `tasks` y limpia el campo de texto para una nueva entrada.
+## How to Run the Project
 
-### Renderizado
+To run this project, follow these steps:
 
-El componente renderiza un formulario con un campo de texto y un botón para agregar la tarea. Debajo del formulario, se muestra una lista (`<ul>`) de todas las tareas agregadas, donde cada tarea es un elemento de lista (`<li>`).
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Run `npm install` to install dependencies.
+4. Run `npm start` to start the application.
 
-## Estilos
+Open <http://localhost:3000> to view it in the browser.
 
-Los estilos se definen en el archivo `TaskList.css`, permitiendo personalizar la apariencia de la lista de tareas y el formulario.
+## Contributing
 
-## Uso
+Contributions are welcome. Please open an issue or make a pull request with your changes.
 
-Para utilizar este componente en una aplicación de React, simplemente se debe importar y renderizar en el componente principal o en cualquier otro componente que lo requiera.
+## License
 
-## Instalación
-
-Para instalar y ejecutar esta aplicación, sigue los siguientes pasos:
-
-1. Clona el repositorio en tu máquina local usando:
-   ```
-
-   git clone URL_DEL_REPOSITORIO
-
-   ```
-   Sustituye `URL_DEL_REPOSITORIO` con la URL actual del repositorio de Git.
-
-2. Navega al directorio del proyecto:
-   ```
-
-   cd directorio_del_proyecto
-
-   ```
-   Reemplaza `directorio_del_proyecto` con el nombre del directorio donde se clonó el proyecto.
-
-3. Instala las dependencias necesarias ejecutando:
-   ```
-
-   npm install
-
-   ```
-   Asegúrate de tener Node.js y npm instalados en tu sistema antes de ejecutar este comando.
-
-## Arranque del Sistema
-
-Para iniciar la aplicación, ejecuta el siguiente comando en el directorio del proyecto:
-```
-
-npm start
-
-```
-Este comando arrancará el servidor de desarrollo y abrirá la aplicación en tu navegador por defecto. Si no se abre automáticamente, puedes acceder a ella visitando `http://localhost:3000` en tu navegador.
-
-```
+This project is licensed under the terms of the MIT license.
