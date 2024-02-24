@@ -24,11 +24,3 @@ To run this project, follow these steps:
 4. Run `npm start` to start the application.
 
 Open <http://localhost:3000> to view it in the browser.
-
-## Contributing
-
-Contributions are welcome. Please open an issue or make a pull request with your changes.
-
-## License
-
-This project is licensed under the terms of the MIT license.
